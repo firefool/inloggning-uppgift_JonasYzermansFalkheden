@@ -6,21 +6,43 @@
     <title>Inloggning</title>
 </head>
 <body>
-
-    <h1>Logga in!</h1>
-
-    <div id="LoginDisplay">
-            <p>Användarnamn</p>
-            <input type="text" name="Username" id="username">
-            <p>Lösenord</p>
-            <input type="password" name="Password" id="password">
-            <p>
-                <button id="login">Logga in</button>
-            </p>
+    <div id="loginDisplay">
+        <fieldset>
+            <legend><b>Logga in!</b></legend>
+                <p>Användarnamn</p>
+                <input type="text" name="Username" id="username" placeholder="Enter username...">
+                <p>Lösenord</p>
+                <input type="password" name="Password" id="password" placeholder="Enter password...">
+                <p>
+                    <button id="login">Logga in</button>
+                </p>
+                <p id="loginMessage"></p>
+        </fieldset>          
     </div>
-    
-    <div id="UserDisplay">
 
+    <div id="loginFailedDisplay">
+        <fieldset>
+            <legend><b>Logga in!</b></legend>
+                <h2>Fel användarnamn eller lösenord!!</h2>
+                    <p>
+                        <button id="tryagain">Försök igen!</button>
+                    </p>
+        </fieldset>
+        
+    </div>
+
+    <div id="userDisplay">
+        <fieldset>
+            <legend><b>Inloggad</b></legend>
+                <h1 id="welcomeText"></h1>
+                    <p>
+                        Finns inte så mycket att göra här...
+                        <p>                        
+                            <button id="logout">Logga ut</button>
+                        </p>
+                    </p>
+        </fieldset>
+    
     </div>
 
     <script src="script.js"></script>
