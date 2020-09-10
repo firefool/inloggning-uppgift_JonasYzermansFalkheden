@@ -7,45 +7,40 @@
 </head>
 <body>
     <!-- Inloggningssidan, visar upp inputrutor och knapp för att logga in -->
-    <div id="loginDisplay">
+    <div>
         <fieldset>
-            <legend><b>Logga in!</b></legend>
-                <p>Användarnamn</p>
-                <input type="text" name="Username" id="username" placeholder="Enter username...">
-                <p>Lösenord</p>
-                <input type="password" name="Password" id="password" placeholder="Enter password...">
-                <p>
-                    <button id="login">Logga in</button>
-                </p>
-                <p id="loginMessage"></p>
-        </fieldset>          
-    </div>
-
-    <!-- Displayen som visas om man skrivit in fel lösenord, visar ett felmeddelande och en knapp för att återgå till inloggniongssidan-->
-    <div id="loginFailedDisplay">
-        <fieldset>
-            <legend><b>Logga in!</b></legend>
-                <h2>Fel användarnamn eller lösenord!!</h2>
+            <legend id="legendTxt"><b>Logga in!</b></legend>
+                <div id="loginDisplay">
+                    <p>Användarnamn</p>
+                    <input type="text" name="Username" id="username" placeholder="Enter username...">
+                    <p>Lösenord</p>
+                    <input type="password" name="Password" id="password" placeholder="Enter password...">
+                    <p>
+                        <button id="login">Logga in</button>
+                    </p>
+                    <p id="loginMessage"></p>
+                </div>
+                
+                <!-- Display som visas upp när man skrivit fel namn eller lösenord-->
+                <div id="loginFailedDisplay">
+                    <h2>Fel användarnamn eller lösenord!!</h2>
                     <p>
                         <button id="tryagain">Försök igen!</button>
                     </p>
-        </fieldset>
-        
-    </div>
+                </div>
 
-    <!-- Sidan som visas när man är inloggad, visar upp ett simpel välkomsttext och en knapp för att logga ut-->
-    <div id="userDisplay">
-        <fieldset>
-            <legend><b>Inloggad</b></legend>
-                <h1 id="welcomeText"></h1>
+                <!-- Välkomstdisplayen för en inloggad användare -->
+                <div id=userDisplay>
+                    <h1 id="welcomeText"></h1>
                     <p>
                         Finns inte så mycket att göra här...
                         <p>                        
                             <button id="logout">Logga ut</button>
                         </p>
                     </p>
-        </fieldset>
-    
+                </div>
+
+        </fieldset>          
     </div>
 
     <script src="script.js"></script>
