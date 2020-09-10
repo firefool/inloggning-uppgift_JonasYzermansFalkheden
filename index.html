@@ -6,6 +6,43 @@
     <title>Inloggning</title>
 </head>
 <body>
-    <h1>Logga in!</h1>
+    <!-- Inloggningssidan, visar upp inputrutor och knapp för att logga in -->
+    <div>
+        <fieldset>
+            <legend id="legendTxt"><b>Logga in!</b></legend>
+                <div id="loginDisplay">
+                    <p>Användarnamn</p>
+                    <input type="text" name="Username" id="username" placeholder="Enter username...">
+                    <p>Lösenord</p>
+                    <input type="password" name="Password" id="password" placeholder="Enter password...">
+                    <p>
+                        <button id="login">Logga in</button>
+                    </p>
+                    <p id="loginMessage"></p>
+                </div>
+                
+                <!-- Display som visas upp när man skrivit fel namn eller lösenord-->
+                <div id="loginFailedDisplay">
+                    <h2>Fel användarnamn eller lösenord!!</h2>
+                    <p>
+                        <button id="tryagain">Försök igen!</button>
+                    </p>
+                </div>
+
+                <!-- Välkomstdisplayen för en inloggad användare -->
+                <div id=userDisplay>
+                    <h1 id="welcomeText"></h1>
+                    <p>
+                        Finns inte så mycket att göra här...
+                        <p>                        
+                            <button id="logout">Logga ut</button>
+                        </p>
+                    </p>
+                </div>
+
+        </fieldset>          
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
